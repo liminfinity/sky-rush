@@ -57,3 +57,15 @@ The development toolchain still uses ESLint 9 because the current React/a11y plu
 Docker regression: all 15 existing real-backend E2E scenarios pass across Chromium, Firefox and WebKit. The isolated stack verified frontend UID 101, health `UP`, OpenAPI 3.1.0 and clean database seeding. A first run exposed the base image's `/run/nginx.pid` permission issue; it was fixed and re-tested. A subsequent Plugin Portal download failure cleared on retry. Test containers and their database volume were removed automatically; application data was not reset.
 
 All six migration SQL files were compared byte-for-byte with the previous working backend image and are unchanged. GitHub Actions configuration is provided, but no remote CI run is claimed. Hadolint was unavailable.
+
+## CI plugin downloads
+
+GitVerse reported a failure resolving SpotBugs 6.5.11 before compilation. The version is published in the official Gradle Plugin Portal; its marker and implementation POM were checked successfully. Neither artifact is available from Maven Central. The supplied log does not identify the underlying HTTP/network error.
+
+CI first runs `scripts/resolve-gradle-plugins.sh`: Gradle `help` resolves the build plugins, with up to three attempts only for dependency/network resolution errors. Retries refresh negative dependency results and retain full stacktraces. The actual `check.sh` still runs once and must pass; tests, SpotBugs, formatting and other rules are unchanged. No third-party mirror or plugin downgrade is used. Persistent network restrictions still fail the job and must be fixed on the runner.
+
+Verification: plugin preflight passed with an empty dependency cache; the full repository check passed. Isolated shell fixtures verified transient recovery, immediate failure for a non-resolution error, and failure after three persistent resolution errors. GitVerse runner connectivity itself was not reproduced locally.
+
+The complete GitVerse archive also confirms Java and Node setup succeeded (Node recovered from a GitHub API rate limit by downloading from nodejs.org). Its job container runs with a root home. `scripts/ci-check.sh` therefore runs checks as `nobody` only when CI starts as root, because embedded PostgreSQL refuses root. The disposable workspace/home become writable by that user; the hosted GitHub non-root runner is unchanged. Gradle cache lives under the CI workspace. All existing checks still run.
+
+The non-root entrypoint passed the full local quality gate. A disposable Ubuntu 24.04 container verified the root-to-nobody transition, writable workspace/home/cache, and retained JAVA_HOME. This is not a claim that a new GitVerse job has already passed.
