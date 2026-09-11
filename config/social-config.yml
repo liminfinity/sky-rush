@@ -1,0 +1,11 @@
+# Social/meta progression only. Restart backend after editing; game-config hot reload is unchanged.
+skyrush:
+  social:
+    presence-seconds: 90    # 30..300; unique authenticated accounts with a recent heartbeat
+    big-win: 200            # >0; achievement only, never a payout parameter
+    high-level: 8          # 1..9; shared milestone reachable in both themes
+    daily-rounds: 3        # 1..25
+    daily-wins: 2          # 1..10
+    daily-points: 150      # 1..10000
+    daily-level: 6         # 1..9
+    daily-cashout: 2.5     # 1..10; daily reward is always exactly one fragment

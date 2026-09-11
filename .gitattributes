@@ -1,0 +1,4 @@
+# Keep shell scripts portable; preserve native Windows wrapper line endings.
+*.sh text eol=lf
+backend/gradlew text eol=lf
+backend/gradlew.bat text eol=crlf

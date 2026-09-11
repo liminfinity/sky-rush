@@ -1,0 +1,554 @@
+[
+  {
+    "file": "frontend/src/features/auth/AuthGate.tsx",
+    "before": "Сессия завершилась. Войдите снова.",
+    "after": "Войди снова",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/auth/AuthGate.tsx",
+    "before": "'Снова в небо':'Твой первый полёт'",
+    "after": "'Войти':'Создать аккаунт'",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/auth/AuthGate.tsx",
+    "before": "Открываем небо…",
+    "after": "Загружаем…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/auth/AuthGate.tsx",
+    "before": "Имя пользователя",
+    "after": "Логин",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/auth/AuthGate.tsx",
+    "before": "Имя в игре",
+    "after": "Имя",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/auth/AuthGate.tsx",
+    "before": "Мгновение…",
+    "after": "Подожди…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/auth/AuthGate.tsx",
+    "before": "Уже есть аккаунт",
+    "after": "Войти",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/betting/BetSelection.tsx",
+    "before": "Готов к полёту?",
+    "after": "Выбери ставку",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/betting/BetSelection.tsx",
+    "before": "Активируется на отмеченном уровне до нажатия «Забрать»",
+    "after": "Достигни бустера до «Забрать»",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/betting/BetSelection.tsx",
+    "before": "Начать полёт",
+    "after": "Начать",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/betting/BetSelection.tsx",
+    "before": "Проверить запуск",
+    "after": "Проверить",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/FlightPanel.tsx",
+    "before": "Фиксируем…",
+    "after": "Забираем…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/FlightPanel.tsx",
+    "before": "Выигрыш зафиксирован",
+    "after": "Забрали",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/FlightPanel.tsx",
+    "before": "Полёт завершён",
+    "after": "Шар лопнул",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/FlightPanel.tsx",
+    "before": "Выигрыш ваш",
+    "after": "Выигрыш сохранён",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/features/game/BoosterStatus.tsx",
+    "before": "Коэффициент без усиления",
+    "after": "Без бустера",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/BoosterStatus.tsx",
+    "before": "`×${b.multiplier} активирован`",
+    "after": "`Бустер ×${b.multiplier}!`",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/ResultScreen.tsx",
+    "before": "\"Победа!\"",
+    "after": "\"Победа\"",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/ResultScreen.tsx",
+    "before": "Игровые очки",
+    "after": "Очки",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/ResultScreen.tsx",
+    "before": "Обменяно ",
+    "after": "Обмен ",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/ResultScreen.tsx",
+    "before": "<strong>{integer(round.earnedPoints)}</strong>",
+    "after": "<strong>+{integer(round.earnedPoints)}</strong>",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/features/rewards/FragmentProgress.tsx",
+    "before": "Прогресс Sky Fragments",
+    "after": "Фрагменты",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/rewards/FragmentProgress.tsx",
+    "before": "Фрагменты обмениваются на бонусы при завершении полёта по его правилам.",
+    "after": "Фрагменты → бонусы после полёта",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/rewards/FragmentProgress.tsx",
+    "before": "Каждые {rules.fragmentsPerBonus} →",
+    "after": "{rules.fragmentsPerBonus} фрагментов →",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/features/history/HistoryList.tsx",
+    "before": "Загружаем историю полётов…",
+    "after": "Загружаем…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/history/HistoryList.tsx",
+    "before": "Первый полёт ещё впереди",
+    "after": "Полётов пока нет",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/history/HistoryList.tsx",
+    "before": "не активирован",
+    "after": "упущен",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/history/HistoryList.tsx",
+    "before": "Выплата",
+    "after": "Выигрыш",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/features/upsell/UpsellPrompt.tsx",
+    "before": "Предложение билетов недоступно; результат игры сохранён.",
+    "after": "Билеты пока недоступны.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/upsell/UpsellPrompt.tsx",
+    "before": "Закрепить успех?",
+    "after": "Демо-билеты",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/upsell/UpsellPrompt.tsx",
+    "before": "Демо-билеты в коллекцию. Без реальных розыгрышей и призов.",
+    "after": "Без розыгрышей и призов.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/upsell/UpsellPrompt.tsx",
+    "before": "{offer.quantity} демо-билетов за {amount(offer.total)} Б",
+    "after": "{offer.quantity} шт. · {amount(offer.total)} Б",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/upsell/UpsellPrompt.tsx",
+    "before": "Купить демо-билеты",
+    "after": "Купить",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/upsell/UpsellPrompt.tsx",
+    "before": "Проверяем…",
+    "after": "Подожди…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "aria-label=\"Турнир\"",
+    "after": "aria-label=\"Рейтинг\"",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "title=\"Турнир\"",
+    "after": "title=\"Рейтинг\"",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "tournament: \"Турнир\"",
+    "after": "tournament: \"Рейтинг\"",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "history: \"История полётов\"",
+    "after": "history: \"История\"",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "rules: \"Как играть\"",
+    "after": "rules: \"Правила\"",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "Выбрать небо",
+    "after": "Выбрать шар",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "Раунд не найден",
+    "after": "Полёт не найден",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "К выбору ставки",
+    "after": "Выбрать ставку",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "Возвращаемся в полёт",
+    "after": "Возвращаем полёт…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "Проверить снова",
+    "after": "Повторить",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "Готовим небо…",
+    "after": "Загружаем…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "Небо пока недоступно",
+    "after": "Не удалось подключиться",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "Подключиться снова",
+    "after": "Повторить",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/components/AppShell.tsx",
+    "before": "Бонусный баланс",
+    "after": "Баланс",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/components/AppShell.tsx",
+    "before": "Информация об игре",
+    "after": "Меню",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/competition/LiveRanking.tsx",
+    "before": " · Вы",
+    "after": " · Ты",
+    "kind": "rewritten"
+  },
+  {
+    "file": "frontend/src/features/competition/LiveRanking.tsx",
+    "before": "Общие очки игроков за сегодня, UTC",
+    "after": "Очки за сегодня",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/IntegrityProof.tsx",
+    "before": "Хеш совпадает: исход не изменён.",
+    "after": "Исход не изменён.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/IntegrityProof.tsx",
+    "before": "Хеш не совпадает. Сохраните данные для проверки.",
+    "after": "Проверка не пройдена. Сохрани номер полёта.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/IntegrityProof.tsx",
+    "before": "Проверка недоступна в этом браузере. Сравните SHA-256 строки раскрытия вручную.",
+    "after": "Этот браузер не поддерживает проверку.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/IntegrityProof.tsx",
+    "before": "Проверка неизменности исхода",
+    "after": "Проверить исход",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/IntegrityProof.tsx",
+    "before": "SHA-256 до полёта. Это демонстрация фиксации исхода, не сертификат честности.",
+    "after": "Отпечаток исхода до полёта. Не сертификат честности.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/IntegrityProof.tsx",
+    "before": "Раскрытие после взрыва:",
+    "after": "После взрыва:",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/IntegrityProof.tsx",
+    "before": "Проверить хеш",
+    "after": "Проверить",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/IntegrityProof.tsx",
+    "before": "Строка раскрытия будет доступна после взрыва.",
+    "after": "Проверка — после взрыва.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/useGame.ts",
+    "before": "Недостаточно бонусов для повторной ставки.",
+    "after": "Не хватает бонусов",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/game/useGame.ts",
+    "before": "Эта ставка больше недоступна. Выберите другую.",
+    "after": "Ставка недоступна. Выбери другую.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/betting/BetSelection.tsx",
+    "before": "        <h2 className=\"bet-prompt\">Выбери ставку</h2>\n",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/betting/BetSelection.tsx",
+    "before": "        <p className=\"bet-explainer\">\n          {bet\n            ? `${amount(bet.stake)} Б · ${bet.boosterMultiplier === 1 ? \"без бустера\" : `бустер ×${bet.boosterMultiplier}`}`\n            : \"×1 — без бустера\"}\n        </p>\n",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/betting/BetSelection.tsx",
+    "before": "        {pending && !starting && (\n          <p className=\"small-note\">\n            Проверяем запуск — без повторного списания.\n          </p>\n        )}\n",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/history/HistoryList.tsx",
+    "before": "<p>Здесь появятся завершённые раунды, очки и награды.</p>",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "          <p>Возвращаем ваш полёт…</p>\n",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "          <p>\n            {game.loading\n              ? \"Ещё мгновение…\"\n              : \"Не удалось подключиться. Попробуем ещё раз?\"}\n          </p>\n",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "<small>Для оценщика</small>",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/upsell/UpsellPrompt.tsx",
+    "before": "<p>Один билет — {amount(offer.unitPrice)} Б.</p>",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/game/ResultScreen.tsx",
+    "before": "<span>{win ? \"Вы забрали\" : \"Ставка сгорела\"}</span>",
+    "after": "{!win && <span>Ставка сгорела</span>}",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/pages/HomePage.tsx",
+    "before": "{game.polling.connectionError} Соединяемся…",
+    "after": "Соединяемся…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Недостаточно бонусов. Обновляем баланс — выберите доступную ставку.",
+    "after": "Не хватает бонусов",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Уже идёт полёт. Если он открыт в другой вкладке, завершите его там и обновите баланс.",
+    "after": "Уже идёт полёт. Вернись к нему.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Забрать можно после первого уровня. Дождитесь обновления полёта.",
+    "after": "Забрать можно после первого уровня",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Выигрыш уже зафиксирован. Проверяем состояние раунда.",
+    "after": "Ты уже забрал выигрыш",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Полёт уже завершился. Получаем итог с сервера.",
+    "after": "Шар уже лопнул",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Этот раунд больше не найден. Можно выбрать новую ставку.",
+    "after": "Полёт не найден. Выбери новую ставку.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Настройки игры временно недоступны. Действующий полёт продолжается по своим правилам.",
+    "after": "Игра пока недоступна",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Демо-режим сейчас отключён на сервере.",
+    "after": "Вход для жюри недоступен",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Не удалось повторить запуск. Обновите страницу для восстановления раунда.",
+    "after": "Не удалось начать. Обнови страницу.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Сервер отклонил запрос. Обновите данные и попробуйте снова.",
+    "after": "Проверь заполненные поля",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/api/client.ts",
+    "before": "Не удалось связаться с сервером. Проверьте соединение и повторите попытку.",
+    "after": "Не удалось подключиться. Попробуй ещё раз.",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/competition/TournamentTable.tsx",
+    "before": "Очки за сегодня · UTC. Реальные игроки, без призов.",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/competition/TournamentTable.tsx",
+    "before": "Скрывать имена соперников",
+    "after": "Скрывать имена",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/competition/TournamentTable.tsx",
+    "before": "Загружаем турнир…",
+    "after": "Загружаем…",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/competition/TournamentTable.tsx",
+    "before": "Активен · осталось",
+    "after": "До конца",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/competition/TournamentTable.tsx",
+    "before": "это вы",
+    "after": "Ты",
+    "kind": "shortened"
+  },
+  {
+    "file": "frontend/src/features/competition/TournamentTable.tsx",
+    "before": "{data.name}",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/competition/TournamentTable.tsx",
+    "before": "Повторяем подключение…",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/rewards/FragmentProgress.tsx",
+    "before": "Обмен — по правилам раунда",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/upsell/TicketInventory.tsx",
+    "before": "Демо-билеты: 0",
+    "after": "",
+    "kind": "removed"
+  },
+  {
+    "file": "frontend/src/features/game/FlightScene.tsx",
+    "before": "Выигрыш ваш",
+    "after": "Выигрыш сохранён",
+    "kind": "rewritten"
+  }
+]

@@ -1,0 +1,54 @@
+{
+  "name": "skyrush-frontend",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "../scripts/run-e2e.sh",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix --max-warnings 0",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "format": "prettier --config .prettierrc.json --write . ../.github/workflows/quality.yml ../docs/code-quality.md",
+    "format:check": "prettier --config .prettierrc.json --check . ../.github/workflows/quality.yml ../docs/code-quality.md",
+    "check": "npm run lint && npm run lint:css && npm run format:check && npm run typecheck && npm test",
+    "audit:production": "npm audit --omit=dev"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.5",
+    "@playwright/test": "^1.63.0",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "eslint": "9.39.5",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.12.0",
+    "jsdom": "^30.0.1",
+    "prettier": "3.9.6",
+    "stylelint": "17.15.0",
+    "stylelint-config-standard": "40.0.0",
+    "typescript": "~5.9.2",
+    "typescript-eslint": "8.70.0",
+    "vite": "^7.1.5",
+    "vitest": "^5.0.0"
+  }
+}

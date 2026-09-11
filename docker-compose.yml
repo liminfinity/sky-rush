@@ -1,0 +1,58 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-skyrush}
+      POSTGRES_USER: ${POSTGRES_USER:-skyrush}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Copy .env.example to .env and set POSTGRES_PASSWORD}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  backend:
+    build: ./backend
+    # Match the host owner so the demo admin can atomically replace YAML files.
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    volumes:
+      - ./config:/app/config
+    environment:
+      SKYRUSH_SOCIAL_CONFIG_PATH: /app/config/social-config.yml
+      SKYRUSH_PROTOTYPE_CONFIG_PATH: /app/config/prototype-config.yml
+      SKYRUSH_CONFIG_PATH: /app/config/game-config.yml
+      SESSION_COOKIE_SECURE: ${SESSION_COOKIE_SECURE:-false}
+      SKYRUSH_RANDOM_SEED: ${SKYRUSH_RANDOM_SEED:-}
+      SKYRUSH_DEMO_ENABLED: ${SKYRUSH_DEMO_ENABLED:-true}
+      SKYRUSH_DEMO_INITIAL_BALANCE: ${SKYRUSH_DEMO_INITIAL_BALANCE:-1000.00}
+      DB_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-skyrush}
+      DB_USERNAME: ${POSTGRES_USER:-skyrush}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${BACKEND_PORT:-8080}:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:8080/actuator/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+  frontend:
+    build: ./frontend
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:5173/"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-5173}:5173"
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  postgres_data:

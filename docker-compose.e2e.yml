@@ -1,0 +1,16 @@
+# Disposable test project only. Never run E2E against the demo database.
+services:
+  postgres:
+    ports: !reset []
+  backend:
+    ports: !reset []
+    volumes: !override
+      - ${E2E_CONFIG_DIR:?Use scripts/run-e2e.sh}:/app/config
+    environment:
+      SESSION_COOKIE_SECURE: 'false'
+      SKYRUSH_RANDOM_SEED: '42'
+      SKYRUSH_DEMO_ENABLED: 'true'
+      SKYRUSH_DEMO_INITIAL_BALANCE: '1000.00'
+  frontend:
+    ports: !override
+      - '127.0.0.1::5173'

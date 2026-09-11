@@ -1,0 +1,5 @@
+skyrush:
+  completion-enabled: false
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver

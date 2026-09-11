@@ -1,0 +1,14 @@
+# Demo/evaluator settings. No authentication: expose only on a trusted local machine.
+# Changes to active affect new starts, never a flight already running.
+game_id: sky-rush
+name: SkyRush
+type: BALLOON_CRASH
+active: true
+upsell:
+  enabled: true
+  min_win_amount: 50.00
+  popup_timeout_seconds: 10
+  ticket_price: 5.00
+  max_tickets: 5
+  # Budget = min(payout * fraction, original stake, available balance).
+  payout_fraction: 0.10

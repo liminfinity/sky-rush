@@ -1,0 +1,51 @@
+spring:
+  config:
+    import: optional:file:${SKYRUSH_SOCIAL_CONFIG_PATH:../config/social-config.yml}
+  jackson:
+    parser:
+      strict-duplicate-detection: true
+    deserialization:
+      accept-float-as-int: false
+      fail-on-unknown-properties: true
+      fail-on-null-for-primitives: true
+      fail-on-missing-creator-properties: true
+  application:
+    name: skyrush
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/skyrush}
+    username: ${DB_USERNAME:skyrush}
+    password: ${DB_PASSWORD}
+  flyway:
+    # Keep history stable when PostgreSQL search_path resolves the skyrush role schema.
+    default-schema: public
+    enabled: true
+    locations: classpath:db/migration
+server:
+  port: ${SERVER_PORT:8080}
+  servlet:
+    session:
+      timeout: 2h
+      cookie:
+        http-only: true
+        same-site: lax
+        secure: ${SESSION_COOKIE_SECURE:false}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+      probes:
+        enabled: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+skyrush:
+  prototype-config-path: ${SKYRUSH_PROTOTYPE_CONFIG_PATH:../config/prototype-config.yml}
+  config-path: ${SKYRUSH_CONFIG_PATH:../config/game-config.yml}
+  random-seed: ${SKYRUSH_RANDOM_SEED:}
+  demo-enabled: ${SKYRUSH_DEMO_ENABLED:true}
+  demo-initial-balance: ${SKYRUSH_DEMO_INITIAL_BALANCE:1000.00}

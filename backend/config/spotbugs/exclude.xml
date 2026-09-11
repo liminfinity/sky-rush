@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<FindBugsFilter>
+  <!-- Exact Spring constructor/field pairs: shared JdbcTemplate, mapper and service beans
+       are deliberately retained, never accepted from player input. Copying them breaks DI. -->
+  <Match><Class name="com.skyrush.auth.AccountService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.auth.AuthController"/><Method name="&lt;init&gt;"/><Field name="contexts"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.competition.CompetitionService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.history.HistoryController"/><Method name="&lt;init&gt;"/><Field name="rounds"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.profile.CollectionService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.profile.ProfileService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.rewards.RewardService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.rounds.RoundCompletionJob"/><Method name="&lt;init&gt;"/><Field name="rounds"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.rounds.RoundCompletionJob"/><Method name="&lt;init&gt;"/><Field name="service"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.rounds.RoundController"/><Method name="&lt;init&gt;"/><Field name="service"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.rounds.RoundRepository"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.rounds.RoundRepository"/><Method name="&lt;init&gt;"/><Field name="json"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.rounds.RoundService"/><Method name="&lt;init&gt;"/><Field name="rounds"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.social.AchievementService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.social.ActivityService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.social.DailyService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.upsell.UpsellService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.upsell.UpsellService"/><Method name="&lt;init&gt;"/><Field name="rounds"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.users.CurrentUserService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <!-- Spring creates this transactional service. No untrusted subclasses or finalizer are used. -->
+  <Match><Class name="com.skyrush.users.DemoUserService"/><Method name="&lt;init&gt;"/><Bug pattern="CT_CONSTRUCTOR_THROW"/></Match>
+  <Match><Class name="com.skyrush.users.DemoUserService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.wallet.WalletController"/><Method name="&lt;init&gt;"/><Field name="rounds"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+  <Match><Class name="com.skyrush.wallet.WalletService"/><Method name="&lt;init&gt;"/><Field name="jdbc"/><Bug pattern="EI_EXPOSE_REP2"/></Match>
+</FindBugsFilter>

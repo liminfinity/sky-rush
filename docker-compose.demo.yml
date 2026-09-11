@@ -1,0 +1,9 @@
+# Compose >= 2.24.4. Same project/data as local mode; only nginx publishes a port.
+services:
+  postgres:
+    ports: !reset []
+  backend:
+    ports: !reset []
+    environment:
+      SESSION_COOKIE_SECURE: 'true'
+      SERVER_FORWARD_HEADERS_STRATEGY: framework

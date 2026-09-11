@@ -1,0 +1,34 @@
+# Save changes here: new rounds load this file; running rounds retain snapshots.
+# Full field ranges and effects: docs/configuration.md
+# Themes share the crash distribution; thresholds refer to the BASE multiplier.
+themes:
+  RED:
+    level_thresholds: [1.2, 1.5, 1.8, 2.2, 2.7, 3.3, 4.0, 4.8, 5.8, 7.0, 8.5, 10.0]
+    booster_position_weights: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  GREEN:
+    level_thresholds: [1.2, 1.5, 2.0, 2.6, 3.4, 4.4, 5.7, 7.4, 9.5]
+    booster_position_weights: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+# Exactly four IDs, with x1/x2/x3/x4 once each. Stakes are bonus units.
+bet_options:
+  - {id: BASIC, stake: 10.00, booster_multiplier: 1}
+  - {id: DOUBLE, stake: 20.00, booster_multiplier: 2}
+  - {id: TRIPLE, stake: 30.00, booster_multiplier: 3}
+  - {id: QUAD, stake: 40.00, booster_multiplier: 4}
+# Uniform base crash sample in [min, max); four decimal places.
+crash_model:
+  min_multiplier: 1.10
+  max_multiplier: 12.00
+# Faster growth reduces real-time reaction windows, not crash samples.
+growth:
+  multiplier_per_second: 0.25
+# Game score only: distinct from wallet bonus balance. Scenario 5 edits points_per_level.
+points:
+  points_per_level: 10
+  points_cashout_bonus: 25
+  booster_activation_bonuses: {1: 0, 2: 10, 3: 20, 4: 30}
+# Persistent fragments convert automatically at completion; remainder is retained.
+reward:
+  fragments_win: 2
+  fragments_loss: 1
+  fragments_per_bonus: 5
+  bonus_amount: 5.00
