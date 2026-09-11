@@ -1,0 +1,16 @@
+{$SKYRUSH_DOMAIN} {
+	request_body {
+		max_size 64KB
+	}
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+
+	# nginx already owns API/Swagger/SPA routing. Caddy normalizes forwarded headers.
+	reverse_proxy frontend:5173
+}

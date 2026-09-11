@@ -361,3 +361,7 @@ npm --prefix frontend run check      # ESLint, CSS, формат, типы, те
 ```
 
 `check` не исправляет файлы и не запускает приложение. Тестовая PostgreSQL изолирована от игровых данных. [Версии инструментов и обоснования исключений](docs/code-quality.md).
+
+## Production/VPS deployment
+
+For an Ubuntu VPS with one domain, automatic HTTPS, private PostgreSQL and manual updates, follow [VPS deployment](docs/deployment-vps.md). Use `.env.prod` and the separate `docker-compose.prod.yml` override. Local Compose startup remains unchanged.

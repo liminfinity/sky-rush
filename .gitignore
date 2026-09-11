@@ -37,3 +37,9 @@ docs/acceptance/**/*.json
 docs/acceptance/**/*.txt
 !docs/acceptance/copy/copy-ledger.json
 docs/acceptance/public-demo/webkit-error.md
+
+# VPS secrets, mutable configuration and backups
+.env.prod
+!.env.prod.example
+runtime/
+backups/

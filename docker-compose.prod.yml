@@ -1,0 +1,53 @@
+# Compose >= 2.24.4. Always combine with docker-compose.yml and --env-file .env.prod.
+name: sky-rush-prod
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+services:
+  postgres:
+    ports: !reset []
+    restart: unless-stopped
+    logging: *logging
+  backend:
+    ports: !reset []
+    restart: unless-stopped
+    logging: *logging
+    volumes: !override
+      - ./runtime/config:/app/config
+    environment:
+      SESSION_COOKIE_SECURE: "true"
+      SERVER_FORWARD_HEADERS_STRATEGY: framework
+      SKYRUSH_RANDOM_SEED: ""
+  frontend:
+    ports: !reset []
+    restart: unless-stopped
+    logging: *logging
+    volumes:
+      - ./deploy/nginx-prod-http.conf:/etc/nginx/conf.d/00-production.conf:ro
+      - ./deploy/nginx-prod-server.conf:/etc/nginx/skyrush-server/production.conf:ro
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    logging: *logging
+    environment:
+      SKYRUSH_DOMAIN: ${SKYRUSH_DOMAIN:?Set SKYRUSH_DOMAIN in .env.prod}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      frontend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "/dev/null", "http://127.0.0.1:2019/config/"]
+      interval: 10s
+      timeout: 5s
+      retries: 6
+volumes:
+  caddy_data:
+  caddy_config:
