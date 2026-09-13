@@ -4,6 +4,9 @@ SkyRush is a web-based balloon crash game for a hackathon. The server-side gamep
 
 ## Quick start for judges
 
+- Hosted game: [Open SkyRush](https://91-210-169-21.sslip.io/)
+- [Presentation and defense materials](https://clck.ru/3VoAFc)
+
 With Docker running, from the repository root (macOS/Linux):
 
 ```sh
